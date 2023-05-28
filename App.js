@@ -12,6 +12,7 @@ import GestureBasics from "./Activities/GestureBasics";
 import ScrollViewPro from "./Activities/ScrollViewPro";
 import { ColorInterpolation } from "./Activities/ColorInterpolation";
 import { ImageDoubleTap } from "./Activities/ImageDoubleTap";
+import { ColourSelector } from "./Activities/ColourSelector";
 
 export default function AnimatedStyleUpdateExample() {
   const progress = useSharedValue(1);
@@ -32,10 +33,10 @@ export default function AnimatedStyleUpdateExample() {
     };
   });
 
-  useEffect(() => {
-    progress.value = withRepeat(withSpring(0.5), -1, true);
-    scale.value = withRepeat(withSpring(1), -1, true);
-  }, []);
+  // useEffect(() => {
+  //   progress.value = withRepeat(withSpring(0.5), -1, true);
+  //   scale.value = withRepeat(withSpring(1), -1, true);
+  // }, []);
 
   return (
     <View style={styles.container}>
@@ -57,7 +58,9 @@ export default function AnimatedStyleUpdateExample() {
       {/* <ColorInterpolation /> */}
 
       {/* Double Tap Instagram  */}
-      <ImageDoubleTap />
+      {/* <ImageDoubleTap /> */}
+
+      <ColourSelector />
 
       {/* <Button title="hello"></Button> */}
     </View>
